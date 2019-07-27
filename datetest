@@ -1,3 +1,4 @@
 #!/bin/bash
 set `date`
 echo now time is $5
+echo today is $1 $2 $3
