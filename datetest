@@ -3,4 +3,5 @@ set `date`
 echo now time is $5
 echo today is $1 $2 $3
 echo The number of CPU:`cat /proc/cpuinfo |grep 'model name' | cut -d ':' -f 2`
+echo The cores of CPU:`cat /proc/cpuinfo | grep 'cpu cores' |cut -d ':' -f 2`
 echo The Memtotal of CPU:`cat /proc/meminfo |grep 'MemTotal'|cut -d ':' -f 2 `
