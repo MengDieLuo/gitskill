@@ -1,0 +1,3 @@
+#!/bin/bash
+set `date`
+echo now time is $5
