@@ -1,4 +1,10 @@
 #!/bin/bash
 set `date`
-echo today is $1 $2 $3
 echo now time is $5
+echo today is $1 $2 $3
+echo The number of CPU:`cat /proc/cpuinfo |grep 'model name' | cut -d ':' -f 2`
+echo The cores of CPU:`cat /proc/cpuinfo | grep 'cpu cores' |cut -d ':' -f 2`
+echo The Memtotal of CPU:`cat /proc/meminfo |grep 'MemTotal'|cut -d ':' -f 2 `
+echo The system disk capacity:`free | awk -F" " '/Mem/{print $2}'`
+echo The free space :`free | awk -F" " '/Mem/{print $3}' `
+echo The Linux kernel version:`uname -r`
